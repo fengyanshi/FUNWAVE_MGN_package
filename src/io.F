@@ -284,7 +284,7 @@ SUBROUTINE READ_INPUT
 	      !if (myid.eq.0) WRITE(*,*) ADJUSTL( trim(DEPTH_TYPE_SUB(1:3)) )
 
 		  DO K=2,NumGrid
-             READ(2,*) DEPTH_FILE_SUB(K)
+             READ(2,'(A80)') DEPTH_FILE_SUB(K)
 # if defined (PARALLEL)	       
 		   if (myid.eq.0) then
 		      WRITE(*,*) "Depth in Subgrid :",ADJUSTL( TRIM( DEPTH_FILE_SUB(K) ) )
@@ -303,7 +303,7 @@ SUBROUTINE READ_INPUT
 		IF( ADJUSTL(trim( STRUCT_TYPE_SUB(1:3) )) == 'DAT' )THEN
 
 		  DO K=2,NumGrid
-             READ(2,*) STRUCT_FILE_SUB(K)
+             READ(2,'(A80)') STRUCT_FILE_SUB(K)
 
 # if defined (PARALLEL)	       
 		   if (myid.eq.0) then

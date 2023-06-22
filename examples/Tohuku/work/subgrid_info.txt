@@ -1,0 +1,8 @@
+% GridDimX   GridDimY  Ratio_Spacing  MboxRef  NboxRef
+1200  1200  4  1300  574
+%Depth Subgrid (DATA or NONE)
+DATA
+../data/dep_child1.txt
+%Structure Subgrid (DATA or NONE)
+DATA
+../data/mask_child1.txt
